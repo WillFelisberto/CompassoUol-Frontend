@@ -12,11 +12,11 @@ export const ContainerBody = styled.div`
 `;
 
 export const ContainerExternal = styled.div`
-	position: absolute;
-	right: 5%;
+	display: flex;
+	flex-direction: row-reverse;
 	border-radius: 5px;
 
-	:hover {
+	a:hover {
 		background-color: #e2e2e2;
 		color: white;
 	}

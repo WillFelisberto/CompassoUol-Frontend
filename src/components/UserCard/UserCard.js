@@ -26,19 +26,19 @@ export default function UserCard({ user }) {
 
 	return (
 		<>
+			<ContainerExternal>
+				<a href={user.html_url} rel="noreferrer" target="_blank">
+					<IconContext.Provider
+						value={{
+							color: '#273842',
+							size: 30,
+						}}
+					>
+						<BiLinkExternal title={`Go to ${user.login} profile on Github`} />
+					</IconContext.Provider>
+				</a>
+			</ContainerExternal>
 			<ContainerBody>
-				<ContainerExternal>
-					<a href={user.html_url} rel="noreferrer" target="_blank">
-						<IconContext.Provider
-							value={{
-								color: '#273842',
-								size: 30,
-							}}
-						>
-							<BiLinkExternal title={`Go to ${user.login} profile on Github`} />
-						</IconContext.Provider>
-					</a>
-				</ContainerExternal>
 				<ContainerData size={'25%'} backgroundImg={data.vibrant}>
 					<img alt={user.name} src={user.avatar_url}></img>
 				</ContainerData>
