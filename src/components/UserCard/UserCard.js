@@ -4,10 +4,14 @@ import {
 	Button,
 	ContainerData,
 	ContainerButton,
+	ContainerExternal,
 } from './styled';
 import { usePalette } from 'react-palette';
 import { GoRepo, GoStar } from 'react-icons/go';
+import { BiLinkExternal } from 'react-icons/bi';
 import Loader from '../common/Loader';
+import { IconContext } from 'react-icons';
+
 const Repositories = lazy(() => import('../Repositories'));
 
 export default function UserCard({ user }) {
@@ -23,6 +27,18 @@ export default function UserCard({ user }) {
 	return (
 		<>
 			<ContainerBody>
+				<ContainerExternal>
+					<a href={user.html_url} rel="noreferrer" target="_blank">
+						<IconContext.Provider
+							value={{
+								color: '#273842',
+								size: 30,
+							}}
+						>
+							<BiLinkExternal title={`Go to ${user.login} profile on Github`} />
+						</IconContext.Provider>
+					</a>
+				</ContainerExternal>
 				<ContainerData size={'25%'} backgroundImg={data.vibrant}>
 					<img alt={user.name} src={user.avatar_url}></img>
 				</ContainerData>

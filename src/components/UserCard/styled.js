@@ -11,6 +11,17 @@ export const ContainerBody = styled.div`
 	}
 `;
 
+export const ContainerExternal = styled.div`
+	position: absolute;
+	right: 5%;
+	border-radius: 5px;
+
+	:hover {
+		background-color: #e2e2e2;
+		color: white;
+	}
+`;
+
 export const ContainerData = styled.div`
 	display: flex;
 	align-items: center;
