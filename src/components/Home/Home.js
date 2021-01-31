@@ -56,14 +56,14 @@ export default function Home() {
 			<Container style={{ marginBottom: 10 }}>
 				<h1>
 					<FaGithub />
-					Github Repositories
+					Github Repositories Search
 				</h1>
 				<Form onSubmit={handleSubmit}>
 					<input
 						required
 						type="text"
 						readOnly={loading && !errors ? true : false}
-						placeholder="Adicionar repositório"
+						placeholder="Enter a Github username"
 						value={newRepo}
 						onChange={handleInputChange}
 					/>
